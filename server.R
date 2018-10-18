@@ -18,7 +18,7 @@ shinyServer(function(input, output, session) {
     # so that Google Charts orders and colors the regions
     # consistently.
     df <- dat %.%
-      filter(year == dat$year) %.%
+      filter(year == input$year) %.%
       select(prefecture, social_assistant, education_expenditure,
         region,population) %.%
       arrange(region)
