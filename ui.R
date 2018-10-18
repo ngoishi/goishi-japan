@@ -8,18 +8,18 @@ ylim <- list(
   max = max(dat$social_assistant) 
 )
 
-shinyUI(fluidPage(
+#shinyUI(fluidPage(
   # This line loads the Google Charts JS library
-  googleChartsInit(),
+ # googleChartsInit(),
 
   # Use the Google webfont "Source Sans Pro"
-  tags$link(
-    href=paste0("http://fonts.googleapis.com/css?",
-                "family=Source+Sans+Pro:300,600,300italic"),
-    rel="stylesheet", type="text/css"),
-  tags$style(type="text/css",
-    "body {font-family: 'Source Sans Pro'}"
-  ),
+  #tags$link(
+  #  href=paste0("http://fonts.googleapis.com/css?",
+  #              "family=Source+Sans+Pro:300,600,300italic"),
+  #  rel="stylesheet", type="text/css"),
+ # tags$style(type="text/css",
+  #  "body {font-family: 'Source Sans Pro'}"
+ # ),
 
   h2("都道府県別に見た生活保護率と教育費"),
 
