@@ -18,22 +18,22 @@ shinyServer(function(input, output, session) {
     # so that Google Charts orders and colors the regions
     # consistently.
     df <- dat %.%
-      filter(year == dat$year) %.%
+      filter(year == input$year) %.%
       select(prefecture, social_assistant, education_expenditure,
         region,population) %.%
       arrange(region)
   })
 
-  output$chart <- reactive({
+  #output$chart <- reactive({
     # Return the data and options
-    list(
-      dat = googleDataTable(yearData()),
-      options = list(
-        title = sprintf(
-          "教育費と生活保護率, %s",
-          dat$year),
-        series = series
-      )
-    )
-  })
-})
+  #  list(
+    #  dat = googleDataTable(yearData()),
+   #   options = list(
+   #     title = sprintf(
+   #       "教育費と生活保護率, %s",
+   #       dat$year),
+   #     series = series
+  #    )
+#    )
+#  })
+#})
